@@ -2,16 +2,28 @@
 
 Program to assemble fungal genome from nanopore read using canu and flye. Then using busco to compare the assemblies and proceed to predict and annotate the proteins frm the better assembly.
 
-Usage: funguy.py -l <lineage> -s <nanopore read> -gs <approx genome size> -db <fasta to build blast database for annotation>
-
+### Usage: 
+```
+funguy.py -l <lineage> -s <nanopore read> -gs <approx genome size> -db <fasta to build blast database for annotation>
+```
 May also work with archaeal and bacterial genome but functionality for those were not tested.
 
-Dependencies:
-Canu, Flye, Busco v5.1.2, braker2, RepeatMasker, RepeatModeler, blast, GenemarkES, Prothint, Augustus
+### Dependencies:
+- Canu
+- Flye
+- Busco v5.1.2
+- braker2
+- RepeatMasker
+- RepeatModeler
+- blast
+- GenemarkES
+- Prothint
+- Augustus
 
 Most dependencies can be setup with miniconda
-
-  conda install -c bioconda -c conda-forge -c thiesgehrmann busco=5.1.2 canu flye blast repeatmodeler repeatmasker braker
+```
+conda install -c bioconda -c conda-forge -c thiesgehrmann busco=5.1.2 canu flye blast repeatmodeler repeatmasker braker
+```
 
 repeatmodeler and repeatmasker need to be setup for the type of organism whose genome is being assembled
 
